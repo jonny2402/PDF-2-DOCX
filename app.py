@@ -4,9 +4,9 @@ from config import Config
 import os
 
 app = Flask(__name__)
-UPLOAD_FOLDER = app.config['UPLOAD_FOLDER']
-CONVERTED_FOLDER = app.config['CONVERTED_FOLDER']
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+UPLOAD_FOLDER = Config.UPLOAD_FOLDER
+CONVERTED_FOLDER = Config.CONVERTED_FOLDER
+
 
 # not needed with s3
 if not os.path.exists(UPLOAD_FOLDER):
